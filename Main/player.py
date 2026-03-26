@@ -1,4 +1,4 @@
-from items import get_item
+from Main.items import get_item
 
 # ---------------------------
 # PLAYER CREATION

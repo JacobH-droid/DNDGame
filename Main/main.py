@@ -1,7 +1,7 @@
 #main.py
 import tkinter as tk
 import sys # Import sys module
-from screens import MainMenu, CharacterScreen, QuestScreen, GameIntroScreen # Import IntroScreen and GameIntroScreen
+from screens import MainMenu, CharacterScreen, GameIntroScreen # Import IntroScreen and GameIntroScreen
 
 # Custom class to redirect stdout to a tkinter Text widget
 class TextRedirector:
@@ -42,7 +42,7 @@ class App(tk.Tk):
         self.frames = {}
         self.current_player = None # Initialize current_player
 
-        for F in (MainMenu, CharacterScreen, GameIntroScreen, QuestScreen): # Add IntroScreen and GameIntroScreen to frames
+        for F in (MainMenu, CharacterScreen, GameIntroScreen): # Add IntroScreen and GameIntroScreen to frames
             frame = F(self.container, self)
             self.frames[F] = frame
             frame.grid(row=0, column=0, sticky="nsew")

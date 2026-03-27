@@ -1,7 +1,5 @@
-# MAIN.PY CONTENT
-# Original Imports:
 import tkinter as tk
-from screens import MainMenu, CharacterScreen, IntroScreen, AdventureScreen, BattleScreen # Added BattleScreen
+from screens import MainMenu, CharacterScreen, IntroScreen, AdventureScreen
 
 class App(tk.Tk):
     def __init__(self):
@@ -19,7 +17,7 @@ class App(tk.Tk):
         self.battle = None
 
         # Register all screens here
-        for F in (MainMenu, CharacterScreen, IntroScreen, AdventureScreen, BattleScreen):
+        for F in (MainMenu, CharacterScreen, IntroScreen, AdventureScreen):
             frame = F(self.container, self)
             self.frames[F] = frame
             frame.grid(row=0, column=0, sticky="nsew")
@@ -34,8 +32,6 @@ class App(tk.Tk):
         # If it's the IntroScreen, call its start_intro method
         if screen_class == IntroScreen:
             frame.start_intro()
-        elif screen_class == BattleScreen:
-            frame.update_display() # Initialize battle screen display
 
 
 if __name__ == "__main__":

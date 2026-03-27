@@ -1,5 +1,5 @@
 import tkinter as tk
-from screens import MainMenu, CharacterScreen, QuestScreen
+from Main.screens import MainMenu, CharacterScreen, QuestScreen
 
 class App(tk.Tk):
     def __init__(self):

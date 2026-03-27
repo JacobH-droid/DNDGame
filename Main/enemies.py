@@ -1,5 +1,7 @@
-# enemies.py
-
+# ENEMIES.PY CONTENT
+# Original Imports:
+# (none)
+# ---------------------------
 enemies = {
     "Goblin": {
         "HP": 20,
@@ -10,7 +12,6 @@ enemies = {
         "Gold": 5,
         "loot_table": ["Health Potion"]
     },
-
     "Orc Warrior": {
         "HP": 35,
         "Attack": 8,
@@ -20,7 +21,6 @@ enemies = {
         "Gold": 15,
         "loot_table": ["Iron Sword", "Steel Shield"]
     },
-
     "Dark Mage": {
         "HP": 25,
         "Attack": 10,
@@ -31,3 +31,6 @@ enemies = {
         "loot_table": ["Mana Potion"]
     }
 }
+
+def get_enemy(enemy_name):
+    return enemies.get(enemy_name)

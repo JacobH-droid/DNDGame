@@ -17,6 +17,7 @@ def create_player(name, race, char_class):
         "race": race,
         "class": char_class,
 
+
         # Base stats
         "max_HP": 30,
         "HP": 30,
@@ -27,6 +28,7 @@ def create_player(name, race, char_class):
         # Progression
         "XP": 0,
         "Gold": 0,
+        "current_location": "Inside Home", # Set initial location
 
         # Inventory & Equipment
         "inventory": list(gear.get("inventory", [])),

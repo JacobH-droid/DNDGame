@@ -1,0 +1,24 @@
+{
+    "name": "Hero",
+    "race": "Human",
+    "class": "Warrior",
+    "max_HP": 30,
+    "HP": 30,
+    "Strength": 5,
+    "Dexterity": 5,
+    "Intelligence": 5,
+    "XP": 0,
+    "Gold": 0,
+    "current_location": "Inside Home",
+    "inventory": [
+        "Iron Sword",
+        "Leather Vest",
+        "Health Potion",
+        "Health Potion"
+    ],
+    "equipment": {
+        "weapon": "Iron Sword",
+        "offhand": null,
+        "body": "Leather Vest"
+    }
+}

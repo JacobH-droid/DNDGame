@@ -16,6 +16,14 @@ locations_data = {
     "Marketplace": {
         "description": "A vibrant market where goods are bought and sold.",
         "connections": ["Town Square"]
+    },
+    "Inside Home": {
+        "description": "This is your home and where your adventure started.",
+        "connections": ["Town/Home Road"]
+    },
+    "Town/Home Road": {
+        "description": "A quiet dirt road leading from your home to the town.",
+        "connections": ["Inside Home", "Town Gates"]
     }
 }
 

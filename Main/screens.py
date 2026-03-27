@@ -48,7 +48,10 @@ class CharacterScreen(tk.Frame):
 
         # Create player and store it in the controller
         self.controller.current_player = create_player(player_name, player_race, player_class)
-        print(f"Player created: {self.controller.current_player['name']}") # For debugging
+        print(f"Player created: {self.controller.current_player['name']} the {player_race} {player_class}!")
+        print("Starting Inventory:", self.controller.current_player['inventory'])
+        print("Starting Equipped:", self.controller.current_player['equipment'])
+        show_player(self.controller.current_player) # Show player status to confirm initial gear
 
         self.controller.show_frame(GameIntroScreen)
 
@@ -61,40 +64,17 @@ class GameIntroScreen(tk.Frame):
         self.controller = controller # Store controller to access player
 
         tk.Label(self, text="The Adventure Begins!", font=("Arial", 20)).pack(pady=20)
-        self.intro_text = tk.Label(self, text="\nYou wake up inside of your house, and it is time to explore! Your gear is laying on the table next to you, waiting for you to put it on before stepping outside",
+        self.intro_text = tk.Label(self, text="\nYou wake up inside of your house, your new gear already feels comfortable on your body. The world outside beckons!",
                  font=("Arial", 14), wraplength=400)
         self.intro_text.pack(pady=10)
 
-        self.get_gear_btn = tk.Button(self, text="Receive Your Starting Gear",
-                                      command=self._receive_starting_gear)
-        self.get_gear_btn.pack(pady=10)
+        # Removed the 'Receive Your Starting Gear' button as gear is now assigned at character creation.
 
         self.continue_btn = tk.Button(self, text="Enter the World",
-                                 command=lambda: controller.show_frame(QuestScreen), state=tk.DISABLED) # Initially disabled
+                                 command=lambda: controller.show_frame(QuestScreen), state=tk.NORMAL) # Now always enabled
         self.continue_btn.pack(pady=20)
 
-    def _receive_starting_gear(self):
-        player = self.controller.current_player
-        if not player:
-            print("Error: Player not created!")
-            return
-
-        # Add initial items
-        add_item(player, "Iron Sword")
-        equip_item(player, "Iron Sword") # Equip it immediately
-
-        add_item(player, "Leather Vest")
-        equip_item(player, "Leather Vest")
-
-        add_item(player, "Health Potion")
-        add_item(player, "Health Potion")
-
-        print(f"{player['name']} received starting gear!")
-        show_player(player) # Show player status to confirm
-
-        self.intro_text.config(text="Your pockets feel heavier, and you're clad in basic armor. The world outside beckons!")
-        self.get_gear_btn.config(state=tk.DISABLED) # Disable button after use
-        self.continue_btn.config(state=tk.NORMAL) # Enable continue button
+    # The _receive_starting_gear method is no longer needed and has been removed.
 
 # ---------------------------
 # QUEST SCREEN

@@ -47,7 +47,7 @@ class App(tk.Tk):
             self.frames[F] = frame
             frame.grid(row=0, column=0, sticky="nsew")
 
-        self.show_frame(MainMenu) # Start with IntroScreen
+        self.show_frame(MainMenu) # Start with MainMenu
 
     def show_frame(self, screen):
         frame = self.frames[screen]

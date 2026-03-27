@@ -4,10 +4,14 @@ from items import get_item
 from weapons import weapons_data
 from armor import armor_data
 from consumables import consumables_data
+from starting_gear import starting_gear_data
 # ---------------------------
 # PLAYER CREATION
 # ---------------------------
 def create_player(name, race, char_class):
+    # Get starting gear based on class and race
+    gear = starting_gear_data.get(char_class, {}).get(race, {})
+
     player = {
         "name": name,
         "race": race,
@@ -25,11 +29,11 @@ def create_player(name, race, char_class):
         "Gold": 0,
 
         # Inventory & Equipment
-        "inventory": ["Health Potion", "Iron Sword"],
+        "inventory": list(gear.get("inventory", [])),
         "equipment": {
-            "weapon": None,
-            "offhand": None,
-            "body": None
+            "weapon": gear.get("equipped", {}).get("weapon"),
+            "offhand": gear.get("equipped", {}).get("offhand"),
+            "body": gear.get("equipped", {}).get("body")
         }
     }
 

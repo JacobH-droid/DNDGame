@@ -4,6 +4,7 @@ from items import get_item # Import get_item to get item details for equipping
 from locations import get_location # Import get_location
 from game_manager import move_player, get_current_location_details # Import game manager functions
 from save_load_manager import save_game # Import save_game
+from starting_gear import starting_gear_data # Import starting_gear_data
 
 
 # ---------------------------
@@ -58,7 +59,7 @@ class CharacterScreen(tk.Frame):
         self.controller.show_frame(GameIntroScreen)
 
 # ---------------------------
-# GAME INTRODUCTION SCREEN 
+# GAME INTRODUCTION SCREEN
 # ---------------------------
 class GameIntroScreen(tk.Frame):
     def __init__(self, parent, controller):
@@ -66,7 +67,7 @@ class GameIntroScreen(tk.Frame):
         self.controller = controller # Store controller to access player
 
         tk.Label(self, text="The Adventure Begins!", font=("Arial", 20)).pack(pady=20)
-        self.intro_text = tk.Label(self, text="\nYou wake up inside of your house, your new gear already feels comfortable on your body. The world outside beckons!",
+        self.intro_text = tk.Label(self, text="",
                  font=("Arial", 14), wraplength=400)
         self.intro_text.pack(pady=10)
 
@@ -87,6 +88,25 @@ class GameIntroScreen(tk.Frame):
             print("Equipped:", player['equipment'])
             show_player(player) # Show player status again with gear
             self.continue_btn.config(state=tk.NORMAL) # Enable 'Enter the World' button
+
+            # Set the intro text based on player's race and class
+            race = player['race']
+            char_class = player['class']
+            print(f"DEBUG: Looking up intro for Class: {char_class}, Race: {race}")
+            gear_data_for_player = starting_gear_data.get(char_class, {}).get(race, {})
+            print(f"DEBUG: Retrieved gear data: {gear_data_for_player}")
+            intro = gear_data_for_player.get("intro", "You wake up inside of your house, your new gear already feels comfortable on your body. The world outside beckons!")
+            self.intro_text.config(text=intro)
+
+            # --- Removed debug code to pull and print all intros ---
+            # print("\n--- All Available Intros (for debugging/verification) ---")
+            # for class_name, class_data in starting_gear_data.items():
+            #     for race_name, race_data in class_data.items():
+            #         current_intro = race_data.get("intro", "No intro defined for this combination.")
+            #         print(f"  Class: {class_name}, Race: {race_name}")
+            #         print(f"    Intro: {current_intro}")
+            # print("--------------------------------------------------")
+            # --- End of removed debug code ---
 
         else:
             print("No player created yet!")
@@ -159,7 +179,7 @@ class GameScreen(tk.Frame):
 
     def _open_map(self):
         print("Map button clicked.")
-        # The current GameScreen already displays connections, serving as a basic map.
+        # The current GameScreen already displays connections, serving as a basic map.>
         # Future: Could implement a more visual map here.
         print("You are viewing the map. Available paths are listed below.")
 

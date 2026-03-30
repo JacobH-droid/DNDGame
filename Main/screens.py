@@ -51,14 +51,14 @@ class CharacterScreen(tk.Frame):
 
         # Create player and store it in the controller
         self.controller.current_player = create_player(player_name, player_race, player_class)
-        print(f"Player created: {self.controller.current_player['name']}\n\n Race: {player_race} \n\n Class: {player_class}!")
+        print(f"Player created: {self.controller.current_player['name']} the {player_race} {player_class}!")
    # Initial gear and stats will be shown when 'Receive Your Starting Gear' is clicked
         show_player(self.controller.current_player) # Show player status to confirm initial gear
 
         self.controller.show_frame(GameIntroScreen)
 
 # ---------------------------
-# GAME INTRODUCTION SCREEN (New narrative intro)
+# GAME INTRODUCTION SCREEN 
 # ---------------------------
 class GameIntroScreen(tk.Frame):
     def __init__(self, parent, controller):
@@ -71,7 +71,7 @@ class GameIntroScreen(tk.Frame):
         self.intro_text.pack(pady=10)
 
         self.gear_btn = tk.Button(self, text="Receive Your Starting Gear",
-                                  command=self._receive_starting_gear) # Re-added gear button
+                                  command=self._receive_starting_gear)
         self.gear_btn.pack(pady=10)
 
         self.continue_btn = tk.Button(self, text="Enter the World",

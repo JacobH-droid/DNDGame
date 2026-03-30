@@ -24,13 +24,13 @@ class CharacterScreen(tk.Frame):
         tk.Label(self, text="Race:").pack()
         self.race_var = tk.StringVar(self)
         self.race_var.set("Human") # Default value
-        self.race_option = tk.OptionMenu(self, self.race_var, "Human", "Elf", "Dwarf")
+        self.race_option = tk.OptionMenu(self, self.race_var, "Human", "Elf", "Dwarf", "Dragonborn", "Tiefling", "Halfling")
         self.race_option.pack()
 
         tk.Label(self, text="Class:").pack()
         self.class_var = tk.StringVar(self)
         self.class_var.set("Warrior") # Default value
-        self.class_option = tk.OptionMenu(self, self.class_var, "Warrior", "Mage", "Rogue")
+        self.class_option = tk.OptionMenu(self, self.class_var, "Warrior", "Wizard", "Rogue", "Barbarian", "Cleric", "Ranger", "Paladin")
         self.class_option.pack()
 
         next_btn = tk.Button(self, text="Continue",
@@ -51,7 +51,7 @@ class CharacterScreen(tk.Frame):
 
         # Create player and store it in the controller
         self.controller.current_player = create_player(player_name, player_race, player_class)
-        print(f"Player created: {self.controller.current_player['name']} the {player_race} {player_class}!")
+        print(f"Player created: {self.controller.current_player['name']}\n\n Race: {player_race} \n\n Class: {player_class}!")
    # Initial gear and stats will be shown when 'Receive Your Starting Gear' is clicked
         show_player(self.controller.current_player) # Show player status to confirm initial gear
 

@@ -23,21 +23,21 @@ class App(tk.Tk):
         super().__init__()
 
         self.title("DND RPG")
-        self.geometry("800x600")
+        self.geometry("1920x1080")
 
-        # Create a frame for the main content (screens)
-        self.container = tk.Frame(self)
-        self.container.pack(side="top", fill="both", expand=True)
+        # Create a frame for the console output on the right
+        self.console_frame = tk.Frame(self, width=250, bd=2, relief=tk.SUNKEN) # Fixed width
+        self.console_frame.pack(side="right", fill="y", expand=False) # Fill vertically, don't expand horizontally
 
-        # Create a frame for the console output
-        self.console_frame = tk.Frame(self, height=150, bd=2, relief=tk.SUNKEN)
-        self.console_frame.pack(side="bottom", fill="x", expand=False)
-
-        self.console_text = tk.Text(self.console_frame, wrap="word", state="disabled", height=8, bg="black", fg="white")
-        self.console_text.pack(fill="both", expand=True)
+        self.console_text = tk.Text(self.console_frame, wrap="word", state="disabled", bg="black", fg="white")
+        self.console_text.pack(fill="both", expand=True) # Text widget fills its parent console_frame
 
         # Redirect stdout to the console_text widget
         sys.stdout = TextRedirector(self.console_text, "stdout")
+
+        # Create a frame for the main content (screens) on the left, filling the rest of the space
+        self.container = tk.Frame(self)
+        self.container.pack(side="left", fill="both", expand=True)
 
         self.frames = {}
         self.current_player = None # Initialize current_player

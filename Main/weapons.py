@@ -183,7 +183,7 @@ weapons_data = {
         "rarity": "rare",
         "value": 25
     }
-}
+} 
 
 
 def weapon(name):

@@ -187,7 +187,7 @@ class GameScreen(tk.Frame):
         print("Settings button clicked.")
         save_game(self.controller.current_player)
         # Future: Implement a settings menu with more options
-
+ 
 # ---------------------------
 # MAIN MENU
 # ---------------------------

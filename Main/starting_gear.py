@@ -3,60 +3,60 @@
 starting_gear_data = {
     "Warrior": {
         "Human": {
-            "inventory": ["Iron Sword", "Leather Vest", "Health Potion", "Health Potion"],
-            "equipped": {"weapon": "Iron Sword", "body": "Leather Vest"},
-            "intro": "As a human warrior, you grasp your sturdy iron sword, feeling the familiar weight of your leather vest. A new day of adventure dawns as you step out from your home."
+            "inventory": ["Iron Sword", "Starter Armor", "Health Potion", "Health Potion"],
+            "equipped": {"weapon": "Iron Sword", "body": "Starter Armor"},
+            "intro": "As a human warrior, you grasp your sturdy iron sword, and don your starter armor. A new day of adventure dawns as you step out from your home."
         },
         "Elf": {
-            "inventory": ["Iron Sword", "Leather Vest", "Health Potion"],
-            "equipped": {"weapon": "Iron Sword", "body": "Leather Vest"},
+            "inventory": ["Iron Sword", "Starter Armor", "Health Potion"],
+            "equipped": {"weapon": "Iron Sword", "body": "Starter Armor"},
             "intro": "Your elven hands instinctively reach for your sword, its familiar hilt a comfort. Though a warrior, the forest still calls to your ancient blood as you leave your dwelling."
         },
         "Dwarf": {
-            "inventory": ["Battle Axe", "Chainmail", "Health Potion", "Health Potion"],
-            "equipped": {"weapon": "Battle Axe", "body": "Chainmail"},
+            "inventory": ["Battle Axe", "Starter Armor", "Health Potion", "Health Potion"],
+            "equipped": {"weapon": "Battle Axe", "body": "Starter Armor"},
             "intro": "The heavy chainmail clinks softly as you, a stout dwarf warrior, heft your battle axe. The mountain calls, but first, the town awaits."
         },
         "Dragonborn": {
-            "inventory": ["Battle Axe", "Chainmail", "Health Potion"],
-            "equipped": {"weapon": "Battle Axe", "body": "Chainmail"},
+            "inventory": ["Battle Axe", "Starter Armor", "Health Potion"],
+            "equipped": {"weapon": "Battle Axe", "body": "Starter Armor"},
             "intro": "Your scales shimmer in the morning light as you, a dragonborn warrior, feel the solid grip of your axe. The roar of adventure echoes in your draconic heart."
         },
         "Tiefling": {
-            "inventory": ["Iron Sword", "Leather Vest", "Health Potion"],
-            "equipped": {"weapon": "Iron Sword", "body": "Leather Vest"},
+            "inventory": ["Iron Sword", "Starter Armor", "Health Potion"],
+            "equipped": {"weapon": "Iron Sword", "body": "Starter Armor"},
             "intro": "With a flick of your tail, you, a tiefling warrior, test the balance of your iron sword. The world may fear your heritage, but your strength will speak for itself."
         },
         "Halfling": {
-            "inventory": ["Dagger", "Leather Vest", "Health Potion", "Health Potion"],
-            "equipped": {"weapon": "Dagger", "body": "Leather Vest"},
-            "intro": "Small but mighty, you, a halfling warrior, strap on your leather vest and dagger. Even the smallest hero can make the biggest difference."
+            "inventory": ["Dagger", "Starter Armor", "Health Potion", "Health Potion"],
+            "equipped": {"weapon": "Dagger", "body": "Starter Armor"},
+            "intro": "Small but mighty, you, a halfling warrior, strap on your Starter Armor and dagger. Even the smallest hero can make the biggest difference."
         }
     },
     "Wizard": {
         "Human": {
-            "inventory": ["Magic Staff", "Magic Robe", "Mana Potion"],
-            "equipped": {"weapon": "Magic Staff", "body": "Magic Robe"},
+            "inventory": ["Magic Staff", "Starter Robe", "Mana Potion"],
+            "equipped": {"weapon": "Magic Staff", "body": "Starter Robe"},
             "intro": "As a human wizard, your fingers tingle with latent magic as you grip your staff. The ancient texts have been studied, and now, the world awaits your arcane prowess."
         },
         "Elf": {
-            "inventory": ["Magic Staff", "Magic Robe", "Mana Potion", "Mana Potion"],
-            "equipped": {"weapon": "Magic Staff", "body": "Magic Robe"},
+            "inventory": ["Magic Staff", "Starter Robe", "Mana Potion", "Mana Potion"],
+            "equipped": {"weapon": "Magic Staff", "body": "Starter Robe"},
             "intro": "Your elven eyes, keen with centuries of knowledge, focus as you, a wizard, prepare your magic staff. The weave of magic is strong, and your journey into its mysteries continues."
         },
         "Dwarf": {
-            "inventory": ["Magic Staff", "Leather Vest", "Mana Potion"],
-            "equipped": {"weapon": "Magic Staff", "body": "Leather Vest"},
-            "intro": "An unusual sight, a dwarf wizard, you adjust your leather vest and tap your staff on the stone floor. Your mastery of the arcane will prove dwarven wisdom goes beyond the forge."
+            "inventory": ["Magic Staff", "Starter Armor", "Mana Potion"],
+            "equipped": {"weapon": "Magic Staff", "body": "Starter Armor"},
+            "intro": "An unusual sight, a dwarf wizard, you adjust your Starter Armor and tap your staff on the stone floor. Your mastery of the arcane will prove dwarven wisdom goes beyond the forge."
         },
         "Dragonborn": {
-            "inventory": ["Magic Staff", "Magic Robe", "Mana Potion"],
-            "equipped": {"weapon": "Magic Staff", "body": "Magic Robe"},
+            "inventory": ["Magic Staff", "Starter Robe", "Mana Potion"],
+            "equipped": {"weapon": "Magic Staff", "body": "Starter Robe"},
             "intro": "The air crackles around you, a dragonborn wizard, as you brandish your magic staff. Your draconic heritage blends with powerful spells, ready to reshape the world."
         },
         "Tiefling": {
-            "inventory": ["Magic Staff", "Magic Robe", "Mana Potion"],
-            "equipped": {"weapon": "Magic Staff", "body": "Magic Robe"},
+            "inventory": ["Magic Staff", "Starter Robe", "Mana Potion"],
+            "equipped": {"weapon": "Magic Staff", "body": "Starter Robe"},
             "intro": "With arcane symbols traced on your skin, you, a tiefling wizard, channel nascent power through your staff. Let the world witness the might of your intellect, not just your lineage."
         },
         "Halfling": {

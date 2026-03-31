@@ -84,7 +84,28 @@ armor_data = {
         "slot": "body",
         "rarity": "uncommon",
         "value": 18
-    }
+    },
+    "No Armor": {
+        "type": "armor",
+        "defense": 0,
+        "slot": "body",
+        "rarity": "common",
+        "value": 0
+    },
+    "Starter Armor": {
+        "type": "armor",
+        "defense": 1,
+        "slot": "body",
+        "rarity": "common",
+        "value": 5
+    },
+    "Starter Robe": {
+        "type": "armor",
+        "defense": 1,
+        "slot": "body",
+        "rarity": "common",
+        "value": 5
+}
 }
 
 def armor(name):

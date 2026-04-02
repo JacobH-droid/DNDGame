@@ -197,8 +197,6 @@ class MainMenu(tk.Frame):
         label = tk.Label(self, text="DND RPG")
         label.pack(pady=20)
         
-      
-        
         start_btn = tk.Button(self,text="Start Game",
                                 command=lambda: controller.show_frame(CharacterScreen))
         start_btn.pack(pady=10)
@@ -206,13 +204,4 @@ class MainMenu(tk.Frame):
         quit_btn = tk.Button(self, text="Quit", command=controller.quit)
         quit_btn.pack(pady=10)
 
-    window = tk.Tk()
-    photo = tk.PhotoImage(file="testingImage.png")
-    
-    button = tk.Button(window,
-                    text ="Save me!",
-                    font=("Pirata One", 40),
-                    fg="#7B3F00")
-    window.mainloop()
-# Need to fix
-# ModuleNotFoundError: No module named 'tkextrafont'
+  

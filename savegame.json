@@ -1,5 +1,5 @@
 {
-    "name": "test",
+    "name": "Hero",
     "race": "Human",
     "class": "Warrior",
     "max_HP": 30,
@@ -12,13 +12,13 @@
     "current_location": "Inside Home",
     "inventory": [
         "Iron Sword",
-        "Leather Vest",
+        "Starter Armor",
         "Health Potion",
         "Health Potion"
     ],
     "equipment": {
         "weapon": "Iron Sword",
         "offhand": null,
-        "body": "Leather Vest"
+        "body": "Starter Armor"
     }
 }

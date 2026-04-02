@@ -1,111 +1,116 @@
-# _armor.py
-
 armor_data = {
-    "Steel Shield": {
+    "Rusted Warrior Helmet": {
         "type": "armor",
-        "defense": 4,
-        "slot": "offhand",
+        "defense": 1,
+        "slot": "head",
         "rarity": "common",
-        "value": 15
+        "value": 3,
+        "set": "Warrior starter"
     },
-    "Plate Armor": {
-        "type": "armor",
-        "defense": 8,
-        "slot": "body",
-        "rarity": "rare",
-        "value": 40
-    },
-    "Leather Vest": {
+    "Rusted Warrior chainmail": {
         "type": "armor",
         "defense": 2,
         "slot": "body",
         "rarity": "common",
-        "value": 8
+        "value": 5,
+        "set": "Warrior starter"
     },
-    "Helmet": {
-        "type": "armor",
-        "defense": 3,
-        "slot": "head",
-        "rarity": "uncommon",
-        "value": 10
-    },
-    "Wizard Hat": {
-        "type": "armor",
-        "defense": 1,
-        "slot": "head",
-        "rarity": "uncommon",
-        "value": 12
-    },
-    "Gauntlets": {
-        "type": "armor",
-        "defense": 2,
-        "slot": "hands",
-        "rarity": "common",
-        "value": 7
-    },
-    "Boots of Swiftness": {
-        "type": "armor",
-        "defense": 1,
-        "slot": "feet",
-        "rarity": "rare",
-        "value": 20
-    },
-    "Chainmail": {
-        "type": "armor",
-        "defense": 5,
-        "slot": "body",
-        "rarity": "uncommon",
-        "value": 25
-    },
-    "Leather Gloves": {
+    "Rusted Warrior Gauntlets": {
         "type": "armor",
         "defense": 1,
         "slot": "hands",
         "rarity": "common",
-        "value": 5
+        "value": 3,
+        "set": "Warrior starter"
     },
-    "Iron Boots": {
+    "Rusted Warrior greaves": {
         "type": "armor",
-        "defense": 2,
-        "slot": "feet",
+        "defense": 1,
+        "slot": "legs",
         "rarity": "common",
-        "value": 10
+        "value": 7,
+        "set": "Warrior starter"
     },
-    "Wooden Shield": {
-        "type": "armor",
+    "Cracked Wooden Shield": {
+        "type": "shield",
         "defense": 2,
         "slot": "offhand",
         "rarity": "common",
-        "value": 8
+        "value": 5,
+        "set": "Warrior starter"
     },
-    "Magic Robe": {
-        "type": "armor",
-        "defense": 3,
-        "slot": "body",
-        "rarity": "uncommon",
-        "value": 18
-    },
-    "No Armor": {
+    "Torn Wizard hat": {
         "type": "armor",
         "defense": 0,
+        "slot": "head",
+        "rarity": "common",
+        "value": 1,
+        "set": "Wizard starter"
+    },
+    "Torn Wizard Robes": {
+        "type": "armor",
+        "defense": 2,
         "slot": "body",
         "rarity": "common",
-        "value": 0
+        "value": 5,
+        "set": "Wizard starter"
     },
-    "Starter Armor": {
+    "Torn Wizard sleeves": {
+        "type": "armor",
+        "defense": 0,
+        "slot": "hands",
+        "rarity": "common",
+        "value": 1,
+        "set": "Wizard starter"
+    },
+    "Torn Wizard lower robe": {
+        "type": "armor",
+        "defense": 2,
+        "slot": "legs",
+        "rarity": "common",
+        "value": 5,
+        "set": "Wizard starter"
+    },
+    "Torn Rogue's mask": {
         "type": "armor",
         "defense": 1,
-        "slot": "body",
+        "slot": "head",
         "rarity": "common",
-        "value": 5
+        "value": 2,
+        "set": "Rogue starter"
     },
-    "Starter Robe": {
+    "Torn Rogue's cloak": {
         "type": "armor",
-        "defense": 1,
+        "defense": 2,
         "slot": "body",
         "rarity": "common",
-        "value": 5
-}
+        "value": 2,
+        "set": "Rogue starter"
+    },
+    "Rusted Rogue's bracer": {
+        "type": "armor",
+        "defense": 2,
+        "slot": "hands",
+        "rarity": "common",
+        "value": 5,
+        "set": "Rogue starter"
+    },
+    "Torn Rogue's leggings": {
+        "type": "armor",
+        "defense": 2,
+        "slot": "legs",
+        "rarity": "common",
+        "value": 5,
+        "set": "Rogue starter"
+    },
+    "Barbarian's Weathered War-Mask": {
+        "type": "armor",
+        "defense": 2,
+        "slot": "head",
+        "rarity": "common",
+        "value": 5,
+        "set": "Barbarian starter"
+    }
 }
 
 def armor(name):

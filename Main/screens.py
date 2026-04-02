@@ -6,7 +6,6 @@ from game_manager import move_player, get_current_location_details # Import game
 from save_load_manager import save_game # Import save_game
 from starting_gear import starting_gear_data # Import starting_gear_data
 
-
 # ---------------------------
 # CHARACTER CREATION SCREEN
 # ---------------------------
@@ -195,12 +194,25 @@ class MainMenu(tk.Frame):
     def __init__(self, parent, controller):
         super().__init__(parent)
 
-        label = tk.Label(self, text="DND RPG", font=("Arial", 24))
+        label = tk.Label(self, text="DND RPG")
         label.pack(pady=20)
-
-        start_btn = tk.Button(self, text="Start Game",
-                              command=lambda: controller.show_frame(CharacterScreen))
+        
+      
+        
+        start_btn = tk.Button(self,text="Start Game",
+                                command=lambda: controller.show_frame(CharacterScreen))
         start_btn.pack(pady=10)
 
         quit_btn = tk.Button(self, text="Quit", command=controller.quit)
         quit_btn.pack(pady=10)
+
+    window = tk.Tk()
+    photo = tk.PhotoImage(file="testingImage.png")
+    
+    button = tk.Button(window,
+                    text ="Save me!",
+                    font=("Pirata One", 40),
+                    fg="#7B3F00")
+    window.mainloop()
+# Need to fix
+# ModuleNotFoundError: No module named 'tkextrafont'
